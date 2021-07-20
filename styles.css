@@ -1,10 +1,10 @@
 .body-class {
-    
+    background-color: bisque;
     padding: 40px 0 40px 0;
- }
+}
  
  .new-body {
-   
+    background-color: aqua;
     padding: 40px 0 40px 0;
  }
  
