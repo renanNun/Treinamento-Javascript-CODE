@@ -1,40 +1,11 @@
 .body-class {
-    background-color: bisque;
-    padding: 40px 0 40px 0;
+   background-color: bisque;
+   width: 100%;
+   height: 100%;
 }
  
- .new-body {
-    background-color: aqua;
-    padding: 40px 0 40px 0;
- }
- 
- .content-title {
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
- }
- 
- .content-list {
-    display: flex; 
- }
- 
- .content-button {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    margin-bottom: 2rem;
- }
- 
- .list {
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
- }
- 
- .content-image {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    flex-direction: column; 
-    margin-bottom: 2rem;
- }
+.new-body {
+   background-color: aqua;
+   width: 100%;
+   height: 100%;
+}

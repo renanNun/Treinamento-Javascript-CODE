@@ -1,124 +1,98 @@
-<!doctype html>
-<html lang="pt-br">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="styles.css">
 
-    <title>Treinamento de Javascript Reboot</title>
+    <title>Reboot Javascript</title>
 </head>
-
 <body class="body-class" id="body">
-    <div class="content-title">
+    
+    <div class="mt-2 text-center">
         <img src="logo-code.png" alt="Logo Code" width="60px" height="60px">
         <h1>Treinamento de JavaScript</h1>
     </div>
-    <div class="container mt-5">
+
+    <div class="mt-5 container">
 
         <div class="text-center mb-3">
-            <h3>Adicionando Elementos na lista</h3>
+            <h1>Adicionando Elementos em lista</h1>
+        </div>
+       
+        <div id="inputItem" class="row justify-content-center form-group">
+            <input type="text"  class="col-6 form-control mr-3" placeholder="Digite aqui">
+            <button onclick="addItem()" class="btn btn-primary col-1">Enviar</button>
         </div>
 
-        <div class="content-list">
-           
-            <div class="row w-100">
-            
-                <div class="col-6">
-                    <div class="form-group">
-                        <input 
-                            type="text"
-                            class="form-control" 
-                            id="inputItemList"
-                            placeholder="Digite aqui">
-                    </div>
-                    
-                    <div class="content-button">
-                        <button 
-                            type="submit" 
-                            id="btnLista" 
-                            onclick="addItem()" 
-                            class="btn btn-primary">
-                            Enviar
-                        </button>
-                    </div>
-                </div>
-               
-                
-                <div class="col-6" >
-                    <ul class="list-group" id="list">
-                        <li class="list-group-item list" >
-                            Lista Integração Code
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
+        <div id="listItem" class="row justify-content-center">
+            <ul class="list-group">
+                <li class="list-group-item list" >
+                    Lista Integração Code
+                </li>
+            </ul>
         </div>
-        
+
         <hr>
 
-        <div class="mt-5 content-image">
-            <div class="content-image" >
-                <h3 id="title">Título da imagem</h3>
-                    <img 
-                        src="https://media-exp1.licdn.com/dms/image/C4E0BAQHJVUdjXcahnQ/company-logo_200_200/0?e=2159024400&v=beta&t=jzN30LRzuT9F1uzXKHmVyd_KzeZOvH2tfhj22z2AWfQ" 
-                        id="image" 
-                        style="height:200px;"
-                    >
-            </div>
+        <div id="image" class="text-center mb-3">
+            <h2>Título da imagem</h2>
+            <img 
+                src="https://media-exp1.licdn.com/dms/image/C4E0BAQHJVUdjXcahnQ/company-logo_200_200/0?e=2159024400&v=beta&t=jzN30LRzuT9F1uzXKHmVyd_KzeZOvH2tfhj22z2AWfQ" 
+                id="image" 
+                style="height:200px;"
+            >
             <input 
                 type="text" 
-                class="form-control col-5" 
+                class="mx-auto mt-3 form-control col-5" 
                 onchange="changeTitle()" 
                 id="inputTitle"
                 placeholder="Digite para mudar o título">
-            
-            <div>
-                <button 
-                    class="btn btn-primary mt-3" 
-                    onclick="setTitle()" 
-                    type="submit"
-                >
-                    Alterar Título
-                </button>
-                <button 
-                    class="btn btn-primary mt-3" 
-                    onclick="changeUrlImg()" 
-                    type="submit"
-                >
-                    Mudar Imagem
-                </button>
-            </div>
+
+            <button 
+                class="btn btn-primary mt-3" 
+                onclick="setTitle()" 
+                type="submit"
+            >
+                Alterar Título
+            </button>
+
+            <button 
+                class="btn btn-primary mt-3" 
+                onclick="changeUrlImg()" 
+                type="submit"
+            >
+                Mudar Imagem
+            </button>
         </div>
 
         <hr>
+
         <h3 class="text-center mb-4">Alterações na página</h3>
-        <div class="content-button">
+        <div class="row">
             <button 
-            type="submit" 
-            id="btnLista" 
-            onclick="changeClass()" 
-            class="btn btn-primary mt-3">
-            Trocar cor de fundo
-        </button>
+                type="submit" 
+                id="btnLista" 
+                onclick="changeClass()" 
+                class="mx-auto btn btn-primary mb-3">
+                Trocar cor de fundo
+            </button>
         </div>
 
         <hr>
         <h3 class="text-center mb-4">Mascara com javascript</h3>
-        <div class="d-flex">
-            <div class="form-group w-100 align-items-center">
+        <div class="row mb-5">
+            <div class="mx-auto form-group w-25">
                 <input 
                 type="text" 
                 class="form-control" 
-                oninput="changeFormat()" 
-                id="inputMoney"
+                maxlength="10" onkeypress="mascaraData(this)"
                 placeholder="Digite um valor">
             </div>
         </div>
@@ -145,7 +119,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous">
     </script>
-    
-</body>
 
+</body>
 </html>
